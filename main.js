@@ -11,8 +11,16 @@ console.log(parseFloat(sum));
 let string1 = "1"; // String
 let digit = 2; // Number
 
-let total = Number(string1 + digit);
+let total = Number(string1) + digit;
 console.log(total);
 
 //3. Ask the user for a three-digit number and print it backwards.
-// To solve the problem, you will need the % operator (remainder of division).
+// To solve the problem, you will need the  % (remainder of division).
+
+let tdn = prompt("Enter a three-digit number please:");
+var hundreds = Math.trunc(tdn / 100);
+var tens = Math.trunc((tdn % 100) / 10);
+let ones = tdn % 10;
+let reversedNumber = ones * 100 + tens * 10 + hundreds;
+alert("The reversed number is: " + reversedNumber);
+alert("The reversed number is: " + ones + tens + hundreds);
